@@ -76,39 +76,56 @@ inoremap jk <Esc>
 " ================== Plugins ==================
 call plug#begin()
 " Temas e cores
+" Tema de cores minimalista inspirado em Seoul
 Plug 'junegunn/seoul256.vim'
+" Coleção de esquemas de cores para Vim
 Plug 'rainglow/vim'
+" Vários esquemas de cores para Vim
 Plug 'flazz/vim-colorschemes'
 
 " Utilidades
+" Inserção automática de pares de parênteses, colchetes, etc.
 Plug 'jiangmiao/auto-pairs'
+" Alinhamento fácil de texto baseado em delimitadores
 Plug 'https://github.com/junegunn/vim-easy-align.git'
+" Tela inicial personalizável para o Vim
 Plug 'mhinz/vim-startify'
+" Navegador de arquivos em árvore
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+" Comentar/descomentar código facilmente
 Plug 'preservim/nerdcommenter'
+" Ícones para arquivos e pastas no Vim
 Plug 'ryanoasis/vim-devicons'
 
 " Status/tabline
+" Temas para o plugin vim-airline (barra de status/tabline)
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_statusline_ontop=0
 
 " FZF (busca fuzzy)
+" Ferramenta de fuzzy finder (busca rápida de arquivos e comandos)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Instalação do FZF via função do plugin
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Go development
+" Ferramentas para desenvolvimento em Go
 Plug 'fatih/vim-go', { 'tag': '*' }
+" Autocompletar para Go
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 
 " Autocomplete
+" Autocompletar inteligente para múltiplas linguagens
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Clojure
+" Integração REPL para Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Plugin não gerenciado (exemplo)
+" Exemplo de plugin local não gerenciado pelo Plug
 Plug '~/my-prototype-plugin'
 call plug#end()
 
@@ -133,37 +150,37 @@ silent! colorscheme materialbox "seoul256
 " Adicionar mais comentários e melhorias abaixo caso necessário
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-" If the vim plugin is in a subdirectory, use 'rtp' option to specify its path
+" Autocompletar para Go
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 
-" On-demand loading: loaded when the specified command is executed
+" Navegador de arquivos em árvore
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 
-" On-demand loading: loaded when a file with a specific file type is opened
+" Integração REPL para Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-" Unmanaged plugin (manually installed and updated)
+" Exemplo de plugin local não gerenciado pelo Plug
 Plug '~/my-prototype-plugin'
 
 "############################PLUGINS PESSOAIS#############
 
-" Plugin startfy
+" Tela inicial personalizável para o Vim
 Plug 'mhinz/vim-startify'
 
-" Funções de comentário tão poderosas — nenhum comentário necessário.
+" Comentar/descomentar código facilmente
 Plug 'preservim/nerdcommenter'
 
 " Vim airline Status/tabline enxuta e média para o vim que é leve como o ar.
-"Plug 'vim-airline/vim-airline'
+" Temas para o plugin vim-airline (barra de status/tabline)
 Plug 'vim-airline/vim-airline-themes'
 
-" Plugin de esquemas de cores 
+" Coleção de esquemas de cores para Vim
 Plug 'rainglow/vim'
 
-" Tema de vim
+" Vários esquemas de cores para Vim
 Plug 'flazz/vim-colorschemes'
 
-" Icones de vim
+" Ícones para arquivos e pastas no Vim
 Plug 'ryanoasis/vim-devicons'
 
 " Call plug#end to update &runtimepath and initialize the plugin system.
